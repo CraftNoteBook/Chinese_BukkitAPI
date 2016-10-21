@@ -45,7 +45,7 @@ public class HangingBreakEvent extends HangingEvent implements Cancellable {
          */
         ENTITY,
         /**
-         * 因爆炸而破坏
+         * 因为爆炸而破坏
          */
         EXPLOSION,
         /**
