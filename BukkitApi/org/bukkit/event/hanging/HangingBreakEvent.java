@@ -5,7 +5,7 @@ import org.bukkit.event.Cancellable;
 import org.bukkit.event.HandlerList;
 
 /**
- * 当一个悬挂实体被移除时调用.
+ * 当一个物品展示框被破坏时调用.
  */
 public class HangingBreakEvent extends HangingEvent implements Cancellable {
     private static final HandlerList handlers = new HandlerList();
@@ -18,11 +18,11 @@ public class HangingBreakEvent extends HangingEvent implements Cancellable {
     }
 
     /**
-     * 获取这个悬挂实体被移除的原因.
+     * 获取这个物品展示框被破坏的原因.
      * <p>
      * 原文：Gets the cause for the hanging entity's removal
      *
-     * @return 这个悬挂实体被移除的原因
+     * @return 这个物品展示框被破坏的原因
      */
     public HangingBreakEvent.RemoveCause getCause() {
         return cause;
@@ -37,15 +37,15 @@ public class HangingBreakEvent extends HangingEvent implements Cancellable {
     }
 
     /**
-     * 指定移除原因的一个枚举
+     * 指定破坏原因的一个枚举
      */
     public enum RemoveCause {
         /**
-         * 被一个实体移除
+         * 被一个实体破坏
          */
         ENTITY,
         /**
-         * 因爆炸而移除
+         * 因爆炸而破坏
          */
         EXPLOSION,
         /**
@@ -57,7 +57,7 @@ public class HangingBreakEvent extends HangingEvent implements Cancellable {
          */
         PHYSICS,
         /**
-         * 未分类（未知）的移除原因（默认）
+         * 未分类（未知）的破坏原因（默认）
          */
         DEFAULT,
     }
